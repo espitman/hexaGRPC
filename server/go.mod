@@ -3,7 +3,7 @@ module github.com/espitman/hexaGRPC
 go 1.22.1
 
 require (
-	github.com/espitman/hexaGRPC/protos v0.0.0-20240308102156-6c11bf866dc7
+	github.com/espitman/hexaGRPC/protos v0.0.0-20240308110039-7cb65585f3fd
 	github.com/gofiber/fiber/v2 v2.52.2
 )
 

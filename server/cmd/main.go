@@ -10,7 +10,8 @@ func main() {
 	userRepository := repository.NewUserRepository()
 	userService := service.NewUserService(userRepository)
 	greetHandler := grpc.NewGreetHandler(userService)
+	userHandler := grpc.NewUserHandler(userService)
 
-	grpcServer := grpc.NewServer(greetHandler)
+	grpcServer := grpc.NewServer(greetHandler, userHandler)
 	grpcServer.Run()
 }

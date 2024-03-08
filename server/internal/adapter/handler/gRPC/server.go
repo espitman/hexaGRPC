@@ -8,11 +8,13 @@ import (
 
 type Server struct {
 	GreetHandler *GreetHandler
+	UserHandler  *UserHandler
 }
 
-func NewServer(greetHandler *GreetHandler) *Server {
+func NewServer(greetHandler *GreetHandler, userHandler *UserHandler) *Server {
 	return &Server{
 		GreetHandler: greetHandler,
+		UserHandler:  userHandler,
 	}
 }
 
@@ -23,6 +25,8 @@ func (s Server) Run() {
 		panic(err)
 	}
 
+	fmt.Println("starting server:8080")
+
 	gs := grpc.NewServer()
 	s.registerServers(gs)
 
@@ -30,5 +34,4 @@ func (s Server) Run() {
 		panic(err)
 	}
 
-	fmt.Println("starting server:8080")
 }
