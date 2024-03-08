@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package greet;
+option go_package = "github.com/espitman/hexaGRPC/protos/protogen/greet";
+
+
+// request
+message GreetRequest {
+  string countryCode = 1;
+  string userName = 2;
+}
+
+// response
+message GreetResponse {
+  string result = 1;
+}
+
+service GreetService {
+  //unary
+  rpc Greet(GreetRequest) returns (GreetResponse) {}
+}
