@@ -1,4 +1,4 @@
-module github.com/espitman/hexaGRPC
+module github.com/espitman/hexaGRPC/protos
 
 go 1.22.1
 
