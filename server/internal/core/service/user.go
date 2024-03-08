@@ -2,8 +2,8 @@ package service
 
 import (
 	"context"
-	"github.com/espitman/hexaGRPC/internal/adapter/database/mongodb/repository"
 	"github.com/espitman/hexaGRPC/internal/core/domain"
+	"github.com/espitman/hexaGRPC/internal/core/port"
 )
 
 /**
@@ -11,10 +11,10 @@ import (
  */
 
 type UserService struct {
-	UserRepository *repository.UserRepository
+	UserRepository port.UserRepository
 }
 
-func NewUserService(userRepository *repository.UserRepository) *UserService {
+func NewUserService(userRepository port.UserRepository) *UserService {
 	return &UserService{
 		UserRepository: userRepository,
 	}

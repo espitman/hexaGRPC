@@ -2,6 +2,7 @@ package grpc
 
 import (
 	"context"
+	"fmt"
 	"github.com/espitman/hexaGRPC/internal/core/port"
 	userpb "github.com/espitman/hexaGRPC/protos/protogen/user"
 )
@@ -18,11 +19,9 @@ func NewUserHandler(userService port.UserService) *UserHandler {
 }
 
 func (h UserHandler) Get(ctx context.Context, req *userpb.GetRequest) (*userpb.GetResponse, error) {
-
 	userId := req.Id
-
+	fmt.Println("call::", userId)
 	users, _ := h.userService.List(&ctx, 0, 1)
-
 	return &userpb.GetResponse{
 		Fname: users[userId].FName,
 		Lname: users[userId].LName,
