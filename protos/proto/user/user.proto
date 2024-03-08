@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package user;
+option go_package = "github.com/espitman/hexaGRPC/protos/protogen/user";
+
+
+// request
+message GetRequest {
+  uint32 id = 1;
+}
+
+// response
+message GetResponse {
+  string fname = 1;
+  string lname = 2;
+}
+
+service UserService {
+  //unary
+  rpc Get(GetRequest) returns (GetResponse) {}
+}

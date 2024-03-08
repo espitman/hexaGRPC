@@ -26,6 +26,7 @@ protoc:
   -I ./validate/ \
   --validate_out="lang=go:." \
 	./proto/greet/*.proto \
+	./proto/user/*.proto \
 
 .PHONY: build
 build: clean protoc move-validate tidy
@@ -43,4 +44,5 @@ execute: build run
 .PHONY: move-validate
 move-validate: 
 	mv ${GO_MODULE}/protogen/greet/* ./protogen/greet
+	mv ${GO_MODULE}/protogen/user/* ./protogen/user
 	rm -fR  ./${ROOT_FOLDER}
