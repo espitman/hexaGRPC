@@ -1,3 +1,5 @@
+github.com/espitman/hexaGRPC v0.0.2-0.20240308102156-6c11bf866dc7 h1:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+github.com/espitman/hexaGRPC v0.0.2-0.20240308102156-6c11bf866dc7/go.mod h1:obysxOrxI3r2DGhdetQeFbkM3opLXWClEsoQHhGPy9o=
 github.com/golang/protobuf v1.5.0/go.mod h1:FsONVRAS9T7sI+LIUmWTfcYkHO4aIWwzhcaSAoJOfIk=
 github.com/golang/protobuf v1.5.3 h1:KhyjKVUg7Usr/dYsdSqoFveMYd5ko72D+zANwlG1mmg=
 github.com/golang/protobuf v1.5.3/go.mod h1:XVQd3VNwM+JqD3oG2Ue2ip4fOMUkwXdXDdiuN0vRsmY=
